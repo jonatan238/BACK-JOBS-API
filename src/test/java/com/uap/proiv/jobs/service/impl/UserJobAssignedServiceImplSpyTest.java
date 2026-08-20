@@ -7,7 +7,6 @@ import org.mockito.InjectMocks;
 import java.util.ArrayList;
 import org.junit.jupiter.api.BeforeEach;
 
-import com.uap.proiv.jobs.client.JobApiRepository;
 import com.uap.proiv.jobs.dto.AssignedResponse;
 import com.uap.proiv.jobs.dto.Job;
 import com.uap.proiv.jobs.dto.User;
