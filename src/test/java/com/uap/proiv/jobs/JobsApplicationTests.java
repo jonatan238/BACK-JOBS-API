@@ -8,6 +8,7 @@ class JobsApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// Test de carga de contexto Spring Boot
 	}
 
 }
