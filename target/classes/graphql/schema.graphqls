@@ -5,6 +5,7 @@ type Query {
 }
 type Mutation {
     addJob(request: JobRequest): Job
+    updateUser(request: UserRequest): User
 }
 
 type UserJobAssigned {
@@ -39,4 +40,10 @@ input JobRequest {
     salary: Float
     hours: Float
     resources: Float
+}
+input UserRequest {
+    id: Int
+    email: String
+    firstName: String
+    lastName: String
 }

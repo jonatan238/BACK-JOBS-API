@@ -52,5 +52,15 @@ public class GraphqlController {
     public Job addJob(@Argument JobRequest request) {
         return jobService.add(request);
     }
+    @MutationMapping
+    public User updateUser(@Argument UserRequest request) {
+        User user = new User();
+        user.setId(request.getId());
+        user.setEmail(request.getEmail());
+        user.setFirstName(request.getFirstName());
+        user.setLastName(request.getLastName());
+        userService.update(user);
+        return user;
+}
 
 }
