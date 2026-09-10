@@ -1,6 +1,5 @@
 package com.uap.proiv.jobs.controller;
 
-
 import com.uap.proiv.jobs.dto.*;
 import com.uap.proiv.jobs.service.JobService;
 import com.uap.proiv.jobs.service.UserJobAssignedService;
@@ -22,8 +21,8 @@ public class GraphqlController {
 
     @Autowired
     public GraphqlController(UserService userService,
-                             JobService jobService,
-                             UserJobAssignedService userJobAssignedService) {
+            JobService jobService,
+            UserJobAssignedService userJobAssignedService) {
         this.userService = userService;
         this.jobService = jobService;
         this.userJobAssignedService = userJobAssignedService;
@@ -37,6 +36,11 @@ public class GraphqlController {
     @QueryMapping
     public User userById(@Argument int id) {
         return userService.searchById(id);
+    }
+
+    @QueryMapping
+    public Job jobById(@Argument int id) {
+        return jobService.getJobById(id);
     }
 
     @SchemaMapping(typeName = "User", field = "job")
